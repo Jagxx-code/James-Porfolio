@@ -334,6 +334,55 @@ section, #about, #education, #skill, #contact {
   transform: scale(1.05);
 }
 
+#projects {
+  padding: 60px 20px;
+}
+
+.projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   header {
