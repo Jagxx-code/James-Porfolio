@@ -15,6 +15,17 @@ body {
   color: #fff;
 }
 
+#codeBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+
 /* Header Styling */
 header {
   display: flex;
@@ -31,7 +42,7 @@ header {
 /* Logo */
 .logo a {
   text-decoration: none;
-  color: #ffd700;
+  color: #00bb2f;
   font-size: 24px;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -56,7 +67,7 @@ header {
 .nav_links li a:hover,
 .nav_links li a.active {
   background: rgba(255, 255, 255, 0.2);
-  color: #ffd700;
+  color: #00bb2f;
 }
 
 /* Button Link */
@@ -97,7 +108,7 @@ section, #about, #education, #skill, #contact {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #ffd700;
+  border: 4px solid #00bb2f;
   margin-bottom: 20px;
 }
 
@@ -118,7 +129,7 @@ section, #about, #education, #skill, #contact {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background-color: #ffd700;
+  background-color: #f8f8f8;
   color: #1f1c2c;
   font-weight: bold;
   text-decoration: none;
@@ -127,7 +138,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .cv-btn:hover {
-  background-color: #e6c200;
+  background-color: #00bb2f;
   transform: scale(1.05);
 }
 
@@ -171,7 +182,7 @@ section, #about, #education, #skill, #contact {
 .education h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #ffd700;
+  color: #00bb2f;
 }
 
 /* Timeline */
@@ -179,7 +190,7 @@ section, #about, #education, #skill, #contact {
   position: relative;
   margin: 0 auto;
   padding-left: 30px;
-  border-left: 3px solid #ffd700;
+  border-left: 3px solid #f8f8f8;
 }
 
 .timeline-item {
@@ -192,9 +203,9 @@ section, #about, #education, #skill, #contact {
 .timeline-item .icon {
   width: 40px;
   height: 40px;
-  background-color: #ffd700;
+  background-color: #f8f8f8;
   border-radius: 50%;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   line-height: 40px;
   font-size: 18px;
@@ -214,12 +225,12 @@ section, #about, #education, #skill, #contact {
 
 .timeline-item h3 {
   margin: 0 0 5px;
-  color: #ffd700;
+  color: #f8f8f8;
 }
 
 .timeline-item p {
   margin: 5px 0;
-  color: #ccc;
+  color: #000000;
   font-size: 0.95rem;
 }
 
@@ -233,7 +244,7 @@ section, #about, #education, #skill, #contact {
 .skills h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #ffd700;
+  color: #00bb2f;
 }
 
 .skills-grid {
@@ -255,9 +266,22 @@ section, #about, #education, #skill, #contact {
 
 .skill-item i {
   font-size: 2.5rem;
-  color: #ffd700;
   margin-bottom: 10px;
 }
+
+.skill-item:nth-child(1) i {
+  color: #ff5733;
+}
+.skill-item:nth-child(2) i {
+  color: #33c1ff;
+}
+.skill-item:nth-child(3) i {
+  color: #ffd700;
+}
+.skill-item:nth-child(4) i {
+  color: #000000;
+}
+
 
 .skill-item p {
   font-size: 1rem;
@@ -277,7 +301,7 @@ section, #about, #education, #skill, #contact {
 .contact h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #ffd700;
+  color: #00bb2f;
 }
 
 .contact p {
@@ -301,7 +325,7 @@ section, #about, #education, #skill, #contact {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffd700;
+  color: #000000;
 }
 
 .input-container input,
@@ -320,7 +344,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .contact-btn {
-  background: #ffd700;
+  background: #f8f8f8;
   color: #1f1c2c;
   padding: 12px 25px;
   border: none;
@@ -330,7 +354,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .contact-btn:hover {
-  background: #e6c200;
+  background: #00bb2f;
   transform: scale(1.05);
 }
 
@@ -347,7 +371,7 @@ section, #about, #education, #skill, #contact {
 .projects h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #ffd700;
+  color: #00bb2f;
 }
 
 .project-grid {
