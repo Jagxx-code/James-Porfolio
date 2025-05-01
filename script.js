@@ -42,7 +42,22 @@
   burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
-   
+
+  const animatedItems = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // Remove when out of view
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedItems.forEach(item => {
+    observer.observe(item);
+  });
 
 const canvas = document.getElementById("codeBackground");
 const ctx = canvas.getContext("2d");

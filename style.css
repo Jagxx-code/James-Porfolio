@@ -161,6 +161,44 @@ section, #about, #education, #skill, #contact {
   min-height: 80vh; /* Optional: center vertically within the viewport */
 }
 
+.typewriter, .typewriter2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+/* Only .typewriter has the blinking cursor */
+.typewriter {
+  border-right: 2px solid #333;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+  font-size: 2rem;
+}
+
+.typewriter2 {
+  animation: typing2 3s steps(30, end) 3.2s forwards;
+  font-size: 1.5rem;
+  opacity: 0; /* Hidden until animation */
+}
+
+/* Typing effect keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes typing2 {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #333 }
+}
+
 
 /* CV Button */
 .cv-btn {
@@ -179,6 +217,7 @@ section, #about, #education, #skill, #contact {
   background-color: #00bb2f;
   transform: scale(1.05);
 }
+
 
 /* Social Buttons */
 .social-buttons {
@@ -271,6 +310,40 @@ section, #about, #education, #skill, #contact {
   color: #ffffff;
   font-size: 0.95rem;
 }
+
+/* Base animation setup */
+.timeline-item {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Fade In Up */
+.fade-in-up {
+  transform: translateY(40px);
+}
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Left */
+.fade-in-left {
+  transform: translateX(-40px);
+}
+.fade-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade In Right */
+.fade-in-right {
+  transform: translateX(40px);
+}
+.fade-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 /* Skills Section */
 .skills {
