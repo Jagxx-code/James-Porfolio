@@ -36,6 +36,14 @@
   });
 
 
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+  
+  burger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+   
+
 const canvas = document.getElementById("codeBackground");
 const ctx = canvas.getContext("2d");
 
@@ -69,5 +77,5 @@ function draw() {
   }
 }
 
-setInterval(draw, 33);
+setInterval(draw, 66);
 

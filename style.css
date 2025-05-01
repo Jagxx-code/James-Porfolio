@@ -48,6 +48,44 @@ header {
   transition: color 0.3s ease;
 }
 
+/* Base styles */
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav_links li {
+    margin: 10px 0;
+  }
+}
+
+
 /* Navigation Links */
 .nav_links {
   list-style: none;
@@ -230,7 +268,7 @@ section, #about, #education, #skill, #contact {
 
 .timeline-item p {
   margin: 5px 0;
-  color: #000000;
+  color: #ffffff;
   font-size: 0.95rem;
 }
 
