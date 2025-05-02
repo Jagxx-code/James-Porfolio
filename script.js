@@ -35,13 +35,15 @@
     });
   });
 
-
-  const burger = document.getElementById('burger');
-  const navMenu = document.getElementById('nav-menu');
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const nav = document.querySelector('nav');
   
-  burger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+    });
   });
+  
 
   const animatedItems = document.querySelectorAll('.timeline-item');
 
