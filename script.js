@@ -44,7 +44,7 @@
     });
   });
   
-
+ 
   const animatedItems = document.querySelectorAll('.timeline-item');
 
   const observer = new IntersectionObserver(entries => {

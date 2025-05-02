@@ -53,6 +53,7 @@ header {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  font-size: 24px;
 }
 
 /* Mobile styles */
@@ -127,6 +128,7 @@ header {
   background-color: #1da851;
 }
 
+
 /* Sections with Glass Effect */
 section, #about, #education, #skill, #contact {
   background: rgba(255, 255, 255, 0.05);
@@ -173,18 +175,18 @@ section, #about, #education, #skill, #contact {
 .typewriter {
   border-right: 2px solid #333;
   animation: typing 3s steps(30, end), blink .75s step-end infinite;
-  font-size: 2rem;
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden;
 }
 
 .typewriter2 {
   animation: typing2 3s steps(30, end) 3.2s forwards;
-  font-size: 1.5rem;
   opacity: 0; /* Hidden until animation */
 }
 
 /* Typing effect keyframes */
 @keyframes typing {
-  from { width: 0 }
+  from { width: 0; }
   to { width: 100% }
 }
 
@@ -205,11 +207,13 @@ section, #about, #education, #skill, #contact {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background-color: #f8f8f8;
-  color: #1f1c2c;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f8f8f8;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -455,8 +459,10 @@ section, #about, #education, #skill, #contact {
 }
 
 .contact-btn {
-  background: #f8f8f8;
-  color: #1f1c2c;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f8f8f8;
   padding: 12px 25px;
   border: none;
   border-radius: 10px;
@@ -465,7 +471,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .contact-btn:hover {
-  background: #00bb2f;
+  background: #049428;
   transform: scale(1.05);
 }
 
