@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body Styling */
 body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -152,15 +156,89 @@ section, #about, #education, #skill, #contact {
   margin-bottom: 20px;
 }
 
-.about {
-  max-width: 700px;
-  margin: 0 auto; /* Center horizontally */
-  text-align: center; /* Center text inside */
+#about {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 80vh; /* Optional: center vertically within the viewport */
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.about {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 2;
+  font-size: 1.25rem;
+  color: #ddd;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.typewriter span {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.typewriter2 {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .typewriter span {
+    font-size: 2rem;
+  }
+
+  .typewriter2 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter span {
+    font-size: 1.6rem;
+  }
+
+  .typewriter2 {
+    font-size: 1.2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .typewriter, .typewriter2 {
@@ -200,6 +278,7 @@ section, #about, #education, #skill, #contact {
   from, to { border-color: transparent }
   50% { border-color: #333 }
 }
+
 
 
 /* CV Button */
