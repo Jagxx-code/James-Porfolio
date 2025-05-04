@@ -27,6 +27,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: black;
+  filter: blur(2px);
 }
 
 
@@ -38,9 +39,17 @@ header {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   padding: 20px 10%;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 /* Logo */
@@ -135,9 +144,6 @@ header {
 
 /* Sections with Glass Effect */
 section, #about, #education, #skill, #contact {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   margin: 40px auto;
   padding: 40px;
   border-radius: 20px;
@@ -162,7 +168,6 @@ section, #about, #education, #skill, #contact {
   align-items: center;
   min-height: 100vh;
   padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .about {

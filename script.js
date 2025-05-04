@@ -12,28 +12,49 @@
     });
   });
 
-  // Highlight active nav link when scrolling
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav_links li a');
+// === HEADER HIDE/SHOW & ACTIVE LINK ===
+const header = document.querySelector("header");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav_links li a");
 
-  window.addEventListener('scroll', () => {
-    let current = '';
+let lastScrollY = window.scrollY;
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute('id');
-      }
-    });
+window.addEventListener("scroll", () => {
+  let current = "";
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
+  // Active link logic
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
   });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+
+  // Header show/hide logic
+  if (window.scrollY > lastScrollY) {
+    header.classList.add("hide"); // scroll down
+  } else {
+    header.classList.remove("hide"); // scroll up
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+// Hide header on nav link click
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    header.classList.add("hide");
+  });
+});
+
 
   document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
