@@ -36,8 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
+  background: transparent;
   padding: 20px 10%;
   position: fixed;
   top: 0;
@@ -97,6 +96,13 @@ header.hide {
   .nav_links li {
     margin: 10px 0;
   }
+}
+
+p.lead {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -203,6 +209,11 @@ section, #about, #education, #skill, #contact {
   color: #aaa;
 }
 
+.green-text {
+  color: #00bb2f;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .about {
@@ -251,7 +262,7 @@ section, #about, #education, #skill, #contact {
   white-space: nowrap;
   width: fit-content;
   margin: 0 auto;
-  font-family: monospace;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 /* Only .typewriter has the blinking cursor */
@@ -281,7 +292,7 @@ section, #about, #education, #skill, #contact {
 /* Cursor blink animation */
 @keyframes blink {
   from, to { border-color: transparent }
-  50% { border-color: #333 }
+  50% { border-color: #fff }
 }
 
 
@@ -302,7 +313,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .cv-btn:hover {
-  background-color: #00bb2f;
+  background-color: #00661a;
   transform: scale(1.05);
 }
 
@@ -454,17 +465,13 @@ section, #about, #education, #skill, #contact {
 }
 
 .skill-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
   width: 100px;
   text-align: center;
 }
 
 .skill-item i {
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 10px;
 }
 
@@ -478,7 +485,7 @@ section, #about, #education, #skill, #contact {
   color: #ffd700;
 }
 .skill-item:nth-child(4) i {
-  color: #000000;
+  color: #ffffff;
 }
 
 
@@ -555,7 +562,7 @@ section, #about, #education, #skill, #contact {
 }
 
 .contact-btn:hover {
-  background: #049428;
+  background: #00661a;
   transform: scale(1.05);
 }
 
